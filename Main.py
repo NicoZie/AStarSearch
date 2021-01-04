@@ -174,6 +174,8 @@ def get_current_node(self):
             retValue = a
     #print(retValue)
     """
+
+    # Ziegler Dummkopf
     result = dict()
     for a in self.openSet:
         result[a] = self.fScore[a]
