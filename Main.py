@@ -150,32 +150,11 @@ def is_open_empty(self):
     """returns True if the open set is empty. False otherwise. """
     # TODO: Return True if the open set is empty. False otherwise.
     return self.openSet == None
-    """if self.openSet != None:
-        return false
-    else:
-        return true
-"""
+
 def get_current_node(self):
     """ Returns the node in the open set with the lowest value of f(node)."""
     # TODO: Return the node in the open set with the lowest value of f(node).
-    """resValue = float('inf')
-    for value in self.openSet:
-        #print(value)
-        if self.calculate_fscore(value) < resValue:
-            resValue = self.calculate_fscore(value)
-            retValue = value
-        #else:
-            #continue
-    """
-    """
-    retValue = float('inf')
-    for a in self.openSet:
-        if self.fScore[a] < retValue:
-            retValue = a
-    #print(retValue)
-    """
 
-    # Ziegler Dummkopf
     result = dict()
     for a in self.openSet:
         result[a] = self.fScore[a]
@@ -188,27 +167,6 @@ def get_neighbors(self, node):
 def get_gScore(self, node):
     """Returns the g Score of a node"""
     # TODO: Return the g Score of a node
-    #sum_g = 0
-    #new_node = node
-    #print(self.cameFrom[new_node])
-
-    """for key in self.cameFrom:
-        if key != self.start:
-            sum_g += self.distance(key, self.cameFrom[key])
-            
-    sum_g += self.distance(self.get_current_node(), node)
-    """
-    """neighbors = self.get_neighbors(node)
-    for i in range(len(neighbors)):
-        if neighbors[i] in self.cameFrom:
-            node_current = neighbors[i]
-    sum_g += self.distance(node_current, node)
-    """
-    """
-    while new_node != self.start:
-        sum_g += self.distance(new_node, self.cameFrom[new_node])
-        new_node = self.cameFrom[new_node]
-     """ 
     return self.gScore[node]
 def distance(self, node_1, node_2):
     """ Computes the Euclidean L2 Distance"""
